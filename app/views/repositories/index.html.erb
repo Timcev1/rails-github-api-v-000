@@ -3,7 +3,7 @@
   <!-- List repositories here! -->
   <h1><%= session[:username] %> Repos</h1>
     <% @repos.each do |repo| %>
-      <li><%= repo[:name] %></li>
+      <li><%= repo[:name.to_s] %></li>
     <%end%>
 
   <%= form_tag("/repositories/create", method: "post") do %>
